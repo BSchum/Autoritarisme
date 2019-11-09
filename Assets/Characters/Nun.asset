@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3fe083f77214e42b733a4f08e558b4, type: 3}
+  m_Name: Nun
+  m_EditorClassIdentifier: 
+  characterName: Sophie
+  backStory: 
+  availableBags:
+  - {fileID: 11400000, guid: e97dee15e4ce9124fb8d8c1e3104eccd, type: 2}
+  - {fileID: 11400000, guid: 1f8f78dc6bd0cbb41a619762ee53fc5b, type: 2}
+  - {fileID: 11400000, guid: 32a898333dc01c94c9e4d63b11e95e06, type: 2}
+  bag: {fileID: 0}
