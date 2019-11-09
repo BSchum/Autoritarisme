@@ -12,6 +12,7 @@ public class CharacterData : ScriptableObject
     public string backStory;
     public List<BagData> availableBags;
     public BagData bag;
+    public Influence influence;
 
 
     public void ChooseRandomBag()
