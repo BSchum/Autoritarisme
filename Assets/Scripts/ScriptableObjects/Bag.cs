@@ -3,5 +3,5 @@
 [CreateAssetMenu(menuName = "Assets/Bag")]
 public class Bag : ScriptableObject
 {
-    Sprite sprite;
+    public Sprite sprite;
 }

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject currentDetritus;
     public Transform scanPosition;
     public float speed = 2f;
-    bool detritusInScan;
     public bool isScanning;
 
     public static GameManager instance;
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     void Scan()
     {
         isScanning = true;
-        Debug.Log("Je scanne le detritus");
+        var bag = currentDetritus.GetComponent<Detritus>().bag;
+        UIManager.instance.PopDetritusZoom(bag);
     }
 }
