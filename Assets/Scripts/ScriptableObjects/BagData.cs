@@ -4,5 +4,6 @@
 public class BagData : ScriptableObject
 {
     public Sprite sprite;
-    public Influence influence;
+    public Influence acceptInfluence;
+    public Influence rejectInfluence;
 }

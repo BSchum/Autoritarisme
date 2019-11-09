@@ -18,35 +18,32 @@ public class UIManager : MonoBehaviour
     public Text ScoreDayText;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
     }
     
-    public void PopDetritusZoom(BagData bag)
+    public void PopDetritusZoom(BagData bag, bool show)
     {
         Debug.Log("Popup");
-        bubbleZoom.gameObject.SetActive(true);
-        bagContent.gameObject.SetActive(true);
+        bubbleZoom.gameObject.SetActive(show);
+        bagContent.gameObject.SetActive(show);
         bagContent.sprite = bag.sprite;
-        AcceptButton.gameObject.SetActive(true);
-        RefuseButton.gameObject.SetActive(true);
+        AcceptButton.gameObject.SetActive(show);
+        RefuseButton.gameObject.SetActive(show);
     }
 
-    public void Accept()
-    {
 
-    }
 
-    public void updateEnvironnementText(int value)
+    public void UpdateEnvironnementText(float value)
     {
         EnvironnementText.text = ($"Environnement : {value.ToString()}");
     }
-    public void updateOpinionText(int value)
+    public void UpdateOpinionText(float value)
     {
         OpinionText.text = ($"Opinion publique : {value.ToString()}");
     }
-    public void updateScoreText(int value)
+    public void UpdateScoreText(float value)
     {
         ScoreDayText.text = ($"Score : {value.ToString()}");
     }

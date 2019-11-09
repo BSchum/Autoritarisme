@@ -8,12 +8,9 @@ public class CharacterData : ScriptableObject
 {
     public string characterName;
     public Sprite sprite;
-    [TextArea]
-    public string backStory;
+    public BackStory backStory;
     public List<BagData> availableBags;
     public BagData bag;
-    public Influence influence;
-
 
     public void ChooseRandomBag()
     {
