@@ -9,8 +9,14 @@ public class UIManager : MonoBehaviour
 
     public Image bubbleZoom;
     public Image bagContent;
+
     public Button AcceptButton;
     public Button RefuseButton;
+
+    public Text EnvironnementText;
+    public Text OpinionText;
+    public Text ScoreDayText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,4 +38,16 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void updateEnvironnementText(int value)
+    {
+        EnvironnementText.text = ($"Environnement : {value.ToString()}");
+    }
+    public void updateOpinionText(int value)
+    {
+        OpinionText.text = ($"Opinion publique : {value.ToString()}");
+    }
+    public void updateScoreText(int value)
+    {
+        ScoreDayText.text = ($"Score : {value.ToString()}");
+    }
 }
