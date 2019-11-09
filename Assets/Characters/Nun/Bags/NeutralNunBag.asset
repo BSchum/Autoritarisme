@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea941e2cdb65144b870ffede39c17ef, type: 3}
   m_Name: NeutralNunBag
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 4d901023fed3f7c449b1b26c535b67d4, type: 3}
+  influence:
+    publicOpinion: 0
+    ecology: 0

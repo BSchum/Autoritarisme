@@ -19,4 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e97dee15e4ce9124fb8d8c1e3104eccd, type: 2}
   - {fileID: 11400000, guid: 1f8f78dc6bd0cbb41a619762ee53fc5b, type: 2}
   - {fileID: 11400000, guid: 32a898333dc01c94c9e4d63b11e95e06, type: 2}
-  bag: {fileID: 0}
+  bag: {fileID: 11400000, guid: 32a898333dc01c94c9e4d63b11e95e06, type: 2}
+  influence:
+    publicOpinion: -10
+    ecology: 50

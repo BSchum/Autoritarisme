@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: BadNunBag
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4d901023fed3f7c449b1b26c535b67d4, type: 3}
+  influence:
+    publicOpinion: -10
+    ecology: -10
