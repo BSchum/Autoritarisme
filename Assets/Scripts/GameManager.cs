@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public List<Character> characters;
     public Character currentCharacter;
     public Detritus currentDetritus;
+    public Detritus detritusPrefab;
+    public Transform detritusSpawn;
     public Transform playerSpawn;
     public Transform scanPosition;
     public float speed = 2f;
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        currentCharacter = Instantiate(characters[Random.Range(0, characters.Count)], playerSpawn.position, Quaternion.identity);
+        SetUpNewCharacter();
     }
 
     // Update is called once per frame
@@ -48,7 +50,17 @@ public class GameManager : MonoBehaviour
     void Scan()
     {
         isScanning = true;
-        var bag = currentDetritus.GetComponent<Detritus>().bag;
+        var bag = currentDetritus.GetComponent<Detritus>().content;
         UIManager.instance.PopDetritusZoom(bag);
+    }
+
+    void SetUpNewCharacter()
+    {
+        //On crée un personnage au hasard
+        currentCharacter = Instantiate(characters[Random.Range(0, characters.Count)], playerSpawn.position, Quaternion.identity);
+        currentCharacter.data.ChooseRandomBag();
+        //On pose le détritu sur la table
+        currentDetritus = Instantiate(detritusPrefab, detritusSpawn.position, Quaternion.identity);
+        currentDetritus.content = currentCharacter.data.bag;
     }
 }
