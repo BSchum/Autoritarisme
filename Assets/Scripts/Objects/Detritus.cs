@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Detritus : MonoBehaviour
 {
-    public Bag bag;
+    public BagData bag;
 }

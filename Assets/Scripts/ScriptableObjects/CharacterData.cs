@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-[CreateAssetMenu(menuName ="Assets/Character")]
-public class Character : ScriptableObject
+[CreateAssetMenu(menuName ="Assets/CharacterData")]
+public class CharacterData : ScriptableObject
 {
-
     public string characterName;
+    public Sprite sprite;
     [TextArea]
     public string backStory;
-    public List<Bag> availableBags;
-    public Bag bag;
+    public List<BagData> availableBags;
+    public BagData bag;
 
 
     public void ChooseRandomBag()

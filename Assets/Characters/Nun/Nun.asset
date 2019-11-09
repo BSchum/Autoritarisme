@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Nun
   m_EditorClassIdentifier: 
   characterName: Sophie
-  backStory: 
+  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  backStory: Lalalala
   availableBags:
   - {fileID: 11400000, guid: e97dee15e4ce9124fb8d8c1e3104eccd, type: 2}
   - {fileID: 11400000, guid: 1f8f78dc6bd0cbb41a619762ee53fc5b, type: 2}

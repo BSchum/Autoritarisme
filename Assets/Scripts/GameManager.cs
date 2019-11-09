@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject currentDetritus;
+    public List<Character> characters;
+    public Character currentCharacter;
+    public Detritus currentDetritus;
+    public Transform playerSpawn;
     public Transform scanPosition;
     public float speed = 2f;
     public bool isScanning;
@@ -15,6 +18,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+    }
+
+    private void Awake()
+    {
+        currentCharacter = Instantiate(characters[Random.Range(0, characters.Count)], playerSpawn.position, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -29,6 +37,11 @@ public class GameManager : MonoBehaviour
         else if(!isScanning && direction.magnitude <= 0)
         {
             Scan();
+        }
+
+
+        if (isScanning)
+        {
         }
     }
 
